@@ -26,7 +26,7 @@
 
 .header {
     background-color: var(--DesaturatedDarkCyan);
-    background-image: url('../images/bg-header-desktop.svg');
+    background-image: url('../images/bg-header-mobile.svg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -100,6 +100,12 @@
     display: grid;
     padding-top: 40px;
     gap: 40px;
+}
+
+.cards-container .load {
+    margin: auto;
+    display: block;
+    width: 70px;
 }
 
 .cards-container .card::before {
@@ -176,7 +182,7 @@
 
 .cards-container .card .details {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
     color: var(--DarkGrayishCyan);
     padding: 0;
