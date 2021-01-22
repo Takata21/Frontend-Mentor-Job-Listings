@@ -1,0 +1,287 @@
+:root {
+    --DesaturatedDarkCyan: hsl(180, 29%, 50%);
+    /*------------------------------*/
+    /*Neutral*/
+    /*------------------------------*/
+    /* (Background) */
+    --LightGrayishCyan: hsl(180, 52%, 96%);
+    /* (Filter Tablets) */
+    --LightGrayishCyan: hsl(180, 31%, 95%);
+    --DarkGrayishCyan: hsl(180, 8%, 52%);
+    --VeryDarkGrayishCyan: hsl(180, 14%, 20%);
+}
+
+.wrapper {
+    padding: 0 23px;
+}
+
+.body {
+    font-family: 'Spartan', sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    margin: 0;
+    padding: 0;
+    background: var(--LightGrayishCyan);
+}
+
+.header {
+    background-color: var(--DesaturatedDarkCyan);
+    background-image: url('../images/bg-header-desktop.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 30vh;
+    position: relative;
+    margin-bottom: 70px;
+}
+
+.filters-container {
+    background: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 30px;
+    position: absolute;
+    bottom: -64px;
+    margin: 0 23px;
+    border-radius: 5px;
+    box-shadow: 0px 3px 18px -9px var(--DesaturatedDarkCyan);
+    visibility: hidden;
+}
+
+.filters-container.actives {
+    visibility: visible;
+}
+
+.filters-container .filters-actives {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.filters-container .filters-actives .filters-actives-item {
+    background: var(--LightGrayishCyan);
+    color: var(--DesaturatedDarkCyan);
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    border-radius: 4px;
+    justify-content: space-between;
+    padding-left: 5px;
+}
+
+.filters-container .filters-actives .btn-close {
+    background: var(--DesaturatedDarkCyan);
+    padding: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    margin-left: 5px;
+}
+
+.filters-container .clear-btn {
+    color: var(--DarkGrayishCyan);
+    background: transparent;
+    cursor: pointer;
+    border-style: none;
+}
+
+.filters-container .clear-btn:hover {
+    color: var(--DesaturatedDarkCyan);
+}
+
+.filters-container .filters-actives .btn-close:hover {
+    background: var(--VeryDarkGrayishCyan);
+}
+
+.cards-container {
+    display: grid;
+    padding-top: 40px;
+    gap: 40px;
+}
+
+.cards-container .card::before {
+    content: '';
+    background: var(--DesaturatedDarkCyan);
+    width: 5px;
+    height: 100%;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-bottom-left-radius: 15px;
+    border-top-left-radius: 15px;
+}
+
+.cards-container .card {
+    position: relative;
+    border-radius: 10px;
+    background: white;
+    padding: 30px 26px;
+    box-shadow: 0px 3px 18px -9px var(--DesaturatedDarkCyan);
+}
+
+.cards-container .card .logo {
+    width: 50px;
+    position: absolute;
+    top: -25px;
+    left: 30px;
+}
+
+.cards-container .card .attr {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.cards-container .card .attr .attr-item {
+    /* border: 1px solid red; */
+    margin: 0;
+    padding: 0;
+    color: var(--DesaturatedDarkCyan);
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: .8em;
+}
+
+.cards-container .card .attr .attr-item.company {
+    text-transform: initial;
+}
+
+.cards-container .card .attr .attr-item.new {
+    background: var(--DesaturatedDarkCyan);
+    color: white;
+    padding: 5px;
+    border-radius: 30px;
+}
+
+.cards-container .card .attr .attr-item.featured {
+    background: var(--VeryDarkGrayishCyan);
+    color: white;
+    padding: 5px;
+    border-radius: 20px;
+}
+
+.cards-container .card .position {
+    font-weight: 700;
+    color: var(--VeryDarkGrayishCyan);
+    cursor: pointer;
+}
+
+.cards-container .card .position:hover {
+    color: var(--DesaturatedDarkCyan);
+}
+
+.cards-container .card .details {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    color: var(--DarkGrayishCyan);
+    padding: 0;
+}
+
+.cards-container .card .details .details-item:first-child {
+    list-style: none;
+}
+
+.cards-container .card .line {
+    color: var(--LightGrayishCyan);
+}
+
+.cards-container .card .options {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.cards-container .card .options .filters-item {
+    margin-right: 15px;
+    margin-bottom: 15px;
+    color: var(--DesaturatedDarkCyan);
+    font-weight: 700;
+    text-decoration: none;
+    padding: 5px;
+    background: var(--LightGrayishCyan);
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.cards-container .card .options .filters-item:hover {
+    color: white;
+    background: var(--DesaturatedDarkCyan);
+}
+
+.footer {
+    margin: 20px 0;
+}
+
+.footer .attribution {
+    font-size: .9em;
+    text-align: center;
+    color: var(--VeryDarkGrayishCyan);
+}
+
+.footer .attribution a {
+    color: hsl(228, 45%, 44%);
+    text-decoration: none;
+}
+
+.footer .attribution a:hover {
+    color: var(--DesaturatedDarkCyan);
+}
+
+@media screen and ( min-width:1080px) {
+    .wrapper {
+        padding: 0 100px;
+    }
+    .filters-container {
+        right: 0;
+        left: 0;
+        margin: 0 100px;
+        bottom: -37px;
+    }
+    .filters-container .filters-actives .filters-actives-item {
+        margin-right: 20px;
+    }
+    .filters-container .clear-btn {
+        font-size: 1.2em;
+    }
+    .cards-container .card .line {
+        display: none;
+    }
+    .cards-container .card {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 'data options';
+    }
+    .cards-container .card .logo {
+        position: initial;
+        width: 88px;
+        margin-right: 20px;
+    }
+    .cards-container .card .card-header {
+        grid-area: data;
+        display: flex;
+        align-items: center;
+    }
+    .cards-container .card .card-header .card-header-data {
+        font-size: 1.2em;
+    }
+    .cards-container .card .card-header .card-header-data .details {
+        justify-content: space-between;
+    }
+    .cards-container .card .card-header .card-header-data .details .details-item {
+        margin-right: 30px;
+    }
+    .cards-container .card .card-header .card-header-data .attr {
+        justify-content: space-between;
+    }
+    .cards-container .card .card-header .card-header-data .position {
+        font-size: 1.3em;
+    }
+    .cards-container .card .options {
+        grid-area: options;
+    }
+}
