@@ -13,7 +13,7 @@ window.addEventListener("DOMContentLoaded", render);
 
 // get data
 async function getData() {
-    const response = await fetch("http://localhost:3004/data");
+    const response = await fetch("data.json");
     data = await response.json();
     return data;
 }
